@@ -1,0 +1,34 @@
+name: writer-cps-full
+version: 0.0.0.1
+synopsis: WriteT and RWST monad transformers (Reexport with all dependencies)
+description:
+  The WriterT and RWST monad transformers provided by writer-cps-transformers
+  are written in continuation passing style and avoid the space-leak
+  problem of the traditional Control.Monad.Trans.Writer.Strict and Control.Monad.Trans.Writer.Lazy.
+  This package reexports from writer-cps-transformers and provides all missing
+  orphan instances, e.g. from mtl.
+category: Control
+author: Daniel Mendler
+maintainer: mail@daniel-mendler.de
+copyright: 2017 Daniel Mendler
+license: BSD3
+github: minad/writer-cps-full
+
+dependencies:
+- base
+- writer-cps-transformers
+- writer-cps-mtl
+- writer-cps-lens
+- writer-cps-morph
+
+tested-with:
+  GHC == 7.0.4,
+  GHC == 7.2.2,
+  GHC == 7.4.2,
+  GHC == 7.6.3,
+  GHC == 7.8.4,
+  GHC == 7.10.3,
+  GHC == 8.0.1
+
+library:
+  source-dirs: src
